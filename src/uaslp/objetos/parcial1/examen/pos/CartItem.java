@@ -1,31 +1,30 @@
 package uaslp.objetos.parcial1.examen.pos;
 
 public class CartItem {
-    int Quantity;
-    String ProductName;
-    int Amount;
+    private int Quantity;
+    private Product product;
 
     public int getQuantity() {
         return Quantity;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public void setQuantity(int quantity) {
         Quantity = quantity;
     }
 
-    public String getProductName() {
-        return ProductName;
+    public String getProductName(){
+        return product.getName();
     }
 
-    public void setProductName(String productName) {
-        ProductName = productName;
-    }
-
-    public int getAmount() {
-        return Amount;
-    }
-
-    public void setAmount(int amount) {
-        Amount = amount;
+    public float getAmount(){
+        return product.getAmount();
     }
 }
